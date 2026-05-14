@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weriezs | 阅读书籍</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="books-page">
+    <canvas id="particles"></canvas>
+
+    <nav class="nav">
+        <div class="nav-logo">W.</div>
+        <div class="nav-links">
+            <a href="index.html#interests">返回</a>
+            <a href="index.html#contact">联系</a>
+        </div>
+    </nav>
+
+    <main class="books-shell">
+        <section class="books-hero reveal">
+            <p class="books-kicker">Reading Archive</p>
+            <h1 class="books-title" id="books-title">阅读书籍</h1>
+            <p class="books-description" id="books-description">有 PDF 的封面支持点击下载，暂无 PDF 的书籍仅展示封面。</p>
+        </section>
+
+        <section class="books-content">
+            <div class="books-grid reveal" id="books-grid"></div>
+            <div class="books-empty glass-card reveal" id="books-empty" hidden>（暂无，尚待添加）</div>
+        </section>
+    </main>
+
+    <script src="books-data.js"></script>
+    <script src="books.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
