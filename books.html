@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weriezs | 阅读书籍</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <meta name="description" content="魏宏宇的阅读档案。">
+    <title>阅读档案 | 魏宏宇</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="books-page">
-    <canvas id="particles"></canvas>
+<body class="site-page books-page">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="page-grid" aria-hidden="true"></div>
 
-    <nav class="nav">
-        <div class="nav-logo">W.</div>
-        <div class="nav-links">
-            <a href="index.html#interests">返回</a>
-            <a href="index.html#contact">联系</a>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="wordmark" href="index.html" aria-label="返回首页">WHY<span>.</span></a>
+            <span class="topbar-context">READING ARCHIVE</span>
+            <div class="topbar-actions">
+                <a class="topbar-link" href="experience.html">研究</a>
+                <button class="theme-switch" type="button" data-theme-toggle aria-pressed="false">
+                    <span class="theme-switch-mark" aria-hidden="true"></span>
+                    <span data-theme-label>夜读</span>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <main class="books-shell">
-        <section class="books-hero reveal">
-            <p class="books-kicker">Reading Archive</p>
-            <h1 class="books-title" id="books-title">阅读书籍</h1>
-            <p class="books-description" id="books-description">有 PDF 的封面支持点击下载，暂无 PDF 的书籍仅展示封面。</p>
-        </section>
+    <main id="main-content" class="shell books-main">
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> 返回主页</a>
+        <header class="books-header">
+            <div>
+                <p class="eyebrow">READING / INDEX</p>
+                <h1 id="books-title">阅读书籍</h1>
+            </div>
+            <p class="books-description" id="books-description">有 PDF 的书籍支持点击打开，暂无 PDF 的书籍仅展示封面。</p>
+        </header>
 
-        <section class="books-content">
-            <div class="books-grid reveal" id="books-grid"></div>
-            <div class="books-empty glass-card reveal" id="books-empty" hidden>（暂无，尚待添加）</div>
+        <section aria-label="书籍列表">
+            <div class="books-grid" id="books-grid"></div>
+            <div class="books-empty" id="books-empty" hidden>（暂无，尚待添加）</div>
         </section>
     </main>
+
+    <footer class="site-footer shell">
+        <span>© 2026 WHY</span>
+        <a href="index.html">返回首页</a>
+    </footer>
 
     <script src="books-data.js"></script>
     <script src="books.js"></script>

@@ -1,194 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weriezs | WHY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魏宏宇的个人主页：统计学习、复杂数据建模与研究经历。">
+    <title>魏宏宇 | WHY</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <canvas id="particles"></canvas>
+<body class="site-page home-page">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="page-grid" aria-hidden="true"></div>
 
-    <nav class="nav">
-        <div class="nav-logo">W.</div>
-        <div class="nav-links">
-            <a href="#about">关于</a>
-            <a href="#interests">兴趣</a>
-            <a href="#research">研究</a>
-            <a href="#journey">生活</a>
-            <a href="#contact">联系</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-greeting">你好，我是</div>
-            <h1 class="hero-name">
-                <span class="name-main">Weriezs</span>
-                <span class="name-divider"></span>
-                <span class="name-sub">WHY</span>
-            </h1>
-            <p class="hero-tagline">探索<em>数学</em>、<em>机器学习</em>与<em>哲学</em>的交汇之处</p>
-            <div class="hero-scroll">
-                <div class="scroll-line"></div>
-                <span>向下滑动探索</span>
+    <header class="topbar">
+        <div class="shell topbar-inner">
+            <a class="wordmark" href="index.html" aria-label="返回首页">WHY<span>.</span></a>
+            <span class="topbar-context">STATISTICS / MACHINE LEARNING</span>
+            <div class="topbar-actions">
+                <a class="topbar-link" href="experience.html">研究</a>
+                <a class="topbar-link" href="books.html?topic=statistics">书单</a>
+                <button class="theme-switch" type="button" data-theme-toggle aria-pressed="false">
+                    <span class="theme-switch-mark" aria-hidden="true"></span>
+                    <span data-theme-label>夜读</span>
+                </button>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title reveal">关于我</h2>
-            <div class="about-grid reveal">
-                <div class="about-card glass-card">
-                    <div class="about-icon">&#10024;</div>
-                    <p>一个充满好奇心的灵魂，游走在知识的广阔版图之上——从数学证明的优雅，到神经计算的奥秘。我相信，真正的理解来自于发现看似无关领域之间的深层联系。</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item glass-card reveal-delay-1">
-                        <span class="stat-symbol">&sigma;</span>
-                        <span class="stat-label">统计学</span>
-                    </div>
-                    <div class="stat-item glass-card reveal-delay-2">
-                        <span class="stat-symbol">&nabla;</span>
-                        <span class="stat-label">深度学习</span>
-                    </div>
-                    <div class="stat-item glass-card reveal-delay-3">
-                        <span class="stat-symbol">&phi;</span>
-                        <span class="stat-label">哲学</span>
-                    </div>
-                    <div class="stat-item glass-card reveal-delay-4">
-                        <span class="stat-symbol">&infin;</span>
-                        <span class="stat-label">求知欲</span>
+    <main id="main-content" class="shell home-main">
+        <section class="profile-layout" aria-labelledby="profile-title">
+            <article class="profile-panel">
+                <div class="panel-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="profile-heading">
+                    <div class="profile-avatar" aria-hidden="true">魏</div>
+                    <div>
+                        <p class="eyebrow">本科生 · 统计学</p>
+                        <p class="profile-place">西南交通大学 / 数学学院</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Interests Section -->
-    <section class="section" id="interests">
-        <div class="container">
-            <h2 class="section-title reveal">热爱与驱动力</h2>
-            <p class="section-subtitle reveal">点击有惊喜！</p>
-            <div class="interests-grid">
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=mathematics">
-                    <div class="interest-icon">&int;</div>
-                    <h3>数学</h3>
-                    <p>宇宙的语言。从抽象代数到实分析，我在严谨中发现美，在证明中感受优雅。</p>
-                </a>
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=statistics">
-                    <div class="interest-icon">&Sigma;</div>
-                    <h3>统计学</h3>
-                    <p>理解不确定性的艺术。贝叶斯推断、随机过程，以及从数据中提炼真知的智慧。</p>
-                </a>
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=machine-learning">
-                    <div class="interest-icon">&#9881;</div>
-                    <h3>机器学习</h3>
-                    <p>让机器学会识别模式。从经典方法到现代深度学习架构，探索智能的边界。</p>
-                </a>
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=neural-networks">
-                    <div class="interest-icon">&#9889;</div>
-                    <h3>神经网络</h3>
-                    <p>受大脑启发的架构。Transformer、CNN 以及人工智能的前沿阵地。</p>
-                </a>
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=philosophy">
-                    <div class="interest-icon">&#9733;</div>
-                    <h3>哲学</h3>
-                    <p>以思辨追问世界与自我。在概念、逻辑与思想史的往返中不断校准认知。</p>
-                </a>
-                <a class="interest-card interest-link glass-card reveal" href="books.html?topic=destiny">
-                    <div class="interest-icon">&#9775;</div>
-                    <h3>命理</h3>
-                    <p>从时间、象数与经验中理解秩序，带着好奇心观察古老知识体系的表达方式。</p>
-                </a>
-            </div>
-        </div>
-    </section>
+                <h1 id="profile-title">魏宏宇<small>WHY</small></h1>
+                <p class="profile-lede">我在数学、统计与机器学习之间搭建自己的问题意识。这里记录研究尝试、阅读轨迹，以及还在形成中的想法。</p>
 
-    <!-- Research Section -->
-    <section class="section" id="research">
-        <div class="container">
-            <h2 class="section-title reveal">研究方向</h2>
-            <div class="research-timeline reveal">
-                <div class="timeline-item glass-card">
-                    <div class="timeline-dot"></div>
-                    <h3>机器学习的数学基础</h3>
-                    <p>理解机器学习背后的理论支撑——优化理论、泛化界与统计学习理论。</p>
+                <div class="tag-list" aria-label="研究与兴趣标签">
+                    <span>统计学习</span>
+                    <span>复杂数据</span>
+                    <span>图结构建模</span>
+                    <span>数学基础</span>
                 </div>
-                <div class="timeline-item glass-card">
-                    <div class="timeline-dot"></div>
-                    <h3>神经网络架构设计</h3>
-                    <p>探索新型架构，从实验与理论两个角度理解为什么某些设计能超越其他。</p>
-                </div>
-                <div class="timeline-item glass-card">
-                    <div class="timeline-dot"></div>
-                    <h3>概率方法</h3>
-                    <p>通过概率建模、变分推断和不确定性量化，架起统计学与深度学习之间的桥梁。</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Journey / Life Section -->
-    <section class="section" id="journey">
-        <div class="container">
-            <h2 class="section-title reveal">代码之外</h2>
-            <div class="journey-grid reveal">
-                <div class="journey-card glass-card">
-                    <div class="journey-emoji">&#127936;</div>
-                    <h3>篮球</h3>
-                    <p>球场是策略与本能碰撞的地方。每一场比赛都是关于团队协作和快速决策的一课。</p>
+                <div class="profile-actions">
+                    <a class="button button-primary" href="experience.html">看研究与项目 <span aria-hidden="true">↗</span></a>
+                    <a class="button button-quiet" href="books.html?topic=statistics">翻开书单 <span aria-hidden="true">→</span></a>
                 </div>
-                <div class="journey-card glass-card">
-                    <div class="journey-emoji">&#9749;</div>
-                    <h3>雨天咖啡</h3>
-                    <p>有一种独特的清明，来自一个人坐在咖啡馆里，看雨水在窗玻璃上画出纹路，只有一杯温热的咖啡和游荡的思绪。</p>
-                </div>
-                <div class="journey-card glass-card">
-                    <div class="journey-emoji">&#128218;</div>
-                    <h3>沉思</h3>
-                    <p>读哲学，修正念，寻找那些洞见栖息的安静角落。</p>
-                </div>
-            </div>
-            <div class="journey-quote reveal">
-                <blockquote class="glass-card">
-                    <p>&ldquo;我唯一知道的，就是我一无所知。&rdquo;</p>
-                    <cite>&mdash; 苏格拉底</cite>
-                </blockquote>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title reveal">联系我</h2>
-            <div class="contact-content reveal">
-                <div class="contact-card glass-card">
-                    <p class="contact-text">我始终欢迎讨论研究想法、学术合作，或者只是关于数学、AI 和哲学的一次好聊。</p>
-                    <div class="contact-links">
-                        <a href="https://github.com/WHY-fly" class="contact-link" id="github-link" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            <span>GitHub</span>
-                        </a>
-                        <span class="contact-link contact-email">
-                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            <span>why3366qq@gmail.com</span>
-                        </span>
-                    </div>
+                <div class="profile-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>目前专注于统计学习与交叉研究</span>
                 </div>
-            </div>
-        </div>
-    </section>
+            </article>
 
-    <footer class="footer">
-        <p>&copy; 2026 Weriezs，以好奇心铸就。</p>
+            <aside class="profile-rail">
+                <section class="rail-block rail-intro" aria-labelledby="about-title">
+                    <p class="block-index">PROFILE / 01</p>
+                    <h2 id="about-title">关于我</h2>
+                    <p>比起把自己归到一个标签里，我更关心不同方法如何在同一个问题上相遇。</p>
+                    <dl class="fact-list">
+                        <div>
+                            <dt>学习阶段</dt>
+                            <dd>2023 — 至今</dd>
+                        </div>
+                        <div>
+                            <dt>保研课程</dt>
+                            <dd>GPA 3.82 / 12·76</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <nav class="rail-block page-index" aria-labelledby="index-title">
+                    <p class="block-index">INDEX / 02</p>
+                    <h2 id="index-title">从这里开始</h2>
+                    <a class="index-link" href="experience.html#projects">
+                        <span><b>项目与研究</b><small>Project notes</small></span>
+                        <strong>01</strong>
+                    </a>
+                    <a class="index-link" href="experience.html#awards">
+                        <span><b>竞赛与奖项</b><small>Selected record</small></span>
+                        <strong>02</strong>
+                    </a>
+                    <a class="index-link" href="books.html?topic=mathematics">
+                        <span><b>阅读档案</b><small>Reading archive</small></span>
+                        <strong>03</strong>
+                    </a>
+                </nav>
+            </aside>
+        </section>
+
+        <section class="notes-section" aria-labelledby="notes-title">
+            <div class="section-heading">
+                <div>
+                    <p class="block-index">NOTES / 03</p>
+                    <h2 id="notes-title">正在关心的事</h2>
+                </div>
+                <p>一些比“个人简介”更接近我的入口。</p>
+            </div>
+
+            <div class="notes-grid">
+                <a class="note-card note-card-coral" href="experience.html#research">
+                    <span class="note-number">01</span>
+                    <span class="note-label">RESEARCH</span>
+                    <h3>统计学习<br>如何面对复杂数据</h3>
+                    <span class="note-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="note-card note-card-blue" href="experience.html#projects">
+                    <span class="note-number">02</span>
+                    <span class="note-label">PROJECTS</span>
+                    <h3>从图结构<br>到神经符号计算</h3>
+                    <span class="note-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="note-card note-card-ink" href="books.html?topic=statistics">
+                    <span class="note-number">03</span>
+                    <span class="note-label">READING</span>
+                    <h3>把读过的书<br>留在这里</h3>
+                    <span class="note-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-strip" aria-labelledby="contact-title">
+            <div>
+                <p class="block-index">CONTACT / 04</p>
+                <h2 id="contact-title">欢迎交换一个认真<br class="mobile-break">的问题。</h2>
+            </div>
+            <div class="contact-actions">
+                <a class="contact-item" href="https://github.com/WHY-fly" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-symbol" aria-hidden="true">GH</span>
+                    <span><b>GitHub</b><small>WHY-fly</small></span>
+                    <span aria-hidden="true">↗</span>
+                </a>
+                <button class="contact-item contact-email" type="button" data-email="why3366qq@gmail.com">
+                    <span class="contact-symbol" aria-hidden="true">@</span>
+                    <span><b>Email</b><small>why3366qq@gmail.com</small></span>
+                    <span class="copy-label" data-copy-label>复制</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer shell">
+        <span>© 2026 WHY</span>
+        <span>made with curiosity</span>
     </footer>
 
     <script src="script.js"></script>

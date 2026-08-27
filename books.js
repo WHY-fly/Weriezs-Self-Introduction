@@ -15,12 +15,18 @@ function getTopicKey() {
 }
 
 function createBookCard(book) {
-    const card = document.createElement(book.pdf ? "a" : "article");
-    card.className = `book-card glass-card ${book.pdf ? "book-card-downloadable" : "book-card-static"}`;
+    const isAvailable = Boolean(book.pdf);
+    const card = document.createElement(isAvailable ? "a" : "article");
+    card.className = `book-card ${isAvailable ? "book-card-downloadable" : "book-card-static"}`;
 
-    if (book.pdf) {
+    if (isAvailable) {
         card.href = book.pdf;
-        card.download = book.downloadName;
+        if (book.official) {
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+        } else if (book.downloadName) {
+            card.download = book.downloadName;
+        }
     }
 
     const image = document.createElement("img");
@@ -42,7 +48,9 @@ function createBookCard(book) {
 
     const action = document.createElement("span");
     action.className = "book-action";
-    action.textContent = book.pdf ? "点击下载 PDF" : "暂无 PDF";
+    action.textContent = isAvailable
+        ? (book.official ? "查看官方 PDF" : "点击下载 PDF")
+        : "仅展示封面";
 
     info.append(title, author, action);
     card.append(image, info);
